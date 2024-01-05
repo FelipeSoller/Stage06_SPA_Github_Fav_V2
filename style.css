@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-primary: 'Roboto', sans-serif;
+  --bg-color: ;
+  --text-color: ;
+  --hue: 195;
+  --primary-color: hsl(195, 91%, 25%);
+}
+
+body * {
+  font-family: var(--ff-primary);
+}
+
+body {
+  font-size: 1.6rem;
+  color: #E1E1E6;
+  background-color: #000;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app {
+  padding: 2rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin-top: 11.5rem;
+  margin-bottom: 9rem;
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: .8rem;
+  align-items: center;
+}
+
+.search input {
+  width: 460px;
+  background: #06181C;
+  border-radius: .5rem;
+  border: none;
+  padding: 1.6rem;
+  color: #7C7C8A;
+  font-size: 1.6rem;
+}
+
+.search button {
+  background-color: #065E7C;
+  color: #FFF;
+  display: flex;
+  padding: 1.2rem 3.2rem;
+  justify-content: center;
+  align-items: center;
+  gap: .8rem;
+  border-radius: .5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  transition: background-color .3s;
+}
+
+.search button p {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+}
+
+.search button:hover {
+  color: #065E7C;
+  background-color: #FFF;
+}
+
+table {
+  outline: 2px solid #065E7C;
+  width: 100%;
+  border-radius: 1.2rem;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+table * {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #E1E1E6;
+}
+
+tbody.table-content {
+  max-height: 30px; /* ou qualquer altura desejada */
+  overflow-y: auto;
+  scrollbar-color: #065E7C #06181C; /* cor da barra de rolagem e cor do fundo do track */
+}
+
+table th {
+  background: #092D38;
+  text-align: left;
+  padding: 1.6rem 4rem;
+}
+
+table tr:nth-child(odd) {
+  background: #06161B80;
+}
+
+table tr:nth-child(even) {
+  background: #06181C;
+}
+
+table td {
+  padding: 1.6rem 4rem;
+  text-align: left;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user a span {
+  font-weight: normal;
+}
+
+td .remove {
+  background: none;
+  border: none;
+  color: #F75A68;
+  cursor: pointer;
+}
