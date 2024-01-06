@@ -1,11 +1,14 @@
 export class GithubUser {
-  static search(username) {
-    const endpoint = `https://api.github.com/users/${username}`
+  static async search(username) {
+    const endpoint = `https://api.github.com/users/${username}`;
 
-    return fetch(endpoint)
-      .then(data => data.json())
-      .then(({ login, name, public_repos, followers }) => ({
-        login, name, public_repos, followers
-      }))
+    try {
+      const response = await fetch(endpoint);
+      const { login, name, public_repos, followers } = await response.json();
+
+      return { login, name, public_repos, followers }
+    } catch (error) {
+      throw new Error('Erro ao obter informações do usuário do GitHub');
+    }
   }
 }
