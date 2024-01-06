@@ -71,7 +71,19 @@ export class FavoritesView extends Favorites {
     if (this.entries.length === 0) {
       const emptyRow = document.createElement('tr');
       const emptyCell = document.createElement('td');
-      emptyCell.textContent = 'Não possui usuários favoritos';
+      const centerDiv = document.createElement('div');
+      const emptyImage = document.createElement('img');
+      const message = document.createElement('p');
+
+      emptyCell.colSpan = 4
+      centerDiv.classList.add('no-favorite-users')
+      emptyImage.src = 'assets/images/no-user-star.svg';
+      emptyImage.alt = 'Nenhum favorito ainda';
+      message.textContent = 'Nenhum favorito ainda';
+
+      centerDiv.appendChild(emptyImage);
+      centerDiv.appendChild(message);
+      emptyCell.appendChild(centerDiv);
       emptyRow.appendChild(emptyCell);
       this.tbody.appendChild(emptyRow);
     } else {

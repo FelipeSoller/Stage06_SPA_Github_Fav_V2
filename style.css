@@ -159,3 +159,23 @@ td .remove {
   color: #F75A68;
   cursor: pointer;
 }
+
+.no-favorite-users {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  margin: 20rem 0;
+}
+
+.no-favorite-users img {
+  width: 130px;
+}
+
+.no-favorite-users p {
+  color: #4E5455;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 2.5rem
+}
